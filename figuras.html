@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometryc Figures</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<style>
+    :root{
+        --very-light-pink: #c7c7c7;
+        --text-input-field: #f7f7f7;
+        --hospital-green: #acd9b2;
+        --black: black;
+        --white: #FFFFFF;
+        --sm: 14px;
+        --md: 16px;
+        --lg: 18px;
+    }
+
+    body{
+        margin: 0;
+        font-family: 'Quicksand', sans-serif;
+    }
+
+    .principal-icon{
+        width: 50px;
+        height: 50px;
+    }
+
+    .secundary-icon{
+        width: 30px;
+    }
+
+    p{
+        margin: 0;
+        margin-bottom: 12px;
+        font-size: var(--md);
+    }
+
+    nav{
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        display: flex;
+        padding: 10px;
+        border-radius: 12px;
+        border-bottom: 2px solid black;
+        margin-bottom: 20px;
+        box-sizing: border-box;
+    }
+
+    nav h1{
+        font-style: normal;
+        font-weight: 500;
+        margin:0px 12px;
+    }
+
+    .figure-container{
+        width: 90%;
+        margin: auto;
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        row-gap: 10px;
+    }
+
+    .figure-card{
+        padding: 10px;
+        box-sizing: border-box;
+        border: 2px solid black;
+        border-radius: 16px;
+    }
+
+    .title-card{
+        justify-content:start;
+        align-items: center;
+        width: 100%;
+        display: flex;
+        border-bottom: 1px solid gray;
+        padding-bottom: 6px;
+        box-sizing: border-box;
+    }
+
+    .figure-card > p{
+        margin-top: 12px;
+        margin-bottom: 28px;
+        font-size: var(--sm);
+    }
+
+    .title-card h3{
+        margin: 0;
+        margin-left: 12px;
+        font-style: normal;
+        font-weight: bold;
+    }
+
+    .form-figure{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 90%;
+        margin: auto;
+    }
+
+    .form-figure div{
+        position: relative;
+    }
+
+    .form-figure div label{
+        position: absolute;
+        top: -12px;
+        left:6px;
+        background-color: white;
+    }
+
+    .form-figure div input{
+        width: 99%;
+        height: 36px;
+        border-radius: 8px;
+        border: solid 1px black;
+        font-size: var(--sm);
+        padding: 6px;
+        padding-left: 20px;
+        box-sizing: border-box;
+    }
+
+    .primary-button{
+        margin-top: 12px;
+        margin-bottom: 16px;
+        background-color: white;
+        height: 32px;
+        border-radius: 8px;
+        border: solid 1px black;
+        color: black;
+    }
+
+    .primary-button:hover{
+        cursor: pointer;
+    }
+
+    .primary-button:active{
+        background-color: var(--very-light-pink);
+    }
+
+    .subtitle{
+        font-weight: bold;
+    }
+</style>
+
+<body>
+    <nav>
+        <img src="./Icons/cubitos.png" alt="logotipo" class="principal-icon">
+        <h1>Geometryc Figures</h1>
+    </nav>
+    <div class="figure-container">
+        <div class="figure-card">
+            <div class="title-card">
+                <img src="./Icons/cuadrado.png" alt="quatre figure" class="secundary-icon">
+                <h3>Cuadrado</h3>
+            </div>
+
+            <p>Registre las medidas del cuadrado</p>
+            
+            <div class="form-figure">
+                <div >
+                    <label for="ladoCuadrado">Lado: </label>
+                    <input type="number" name="" id="ladoCuadrado">
+                </div>
+
+                <button type="button" class="primary-button">Calcular</button>
+
+                <p class="subtitle">El perímetro del cuadrado es: </p>
+                <p>Respuesta</p>
+
+                <p class="subtitle">El área del cuadrado es: </p>
+                <p>Respuesta2</p>
+            </div>
+        </div>
+
+
+    <script src="./figuras.js"></script>
+</body>
+</html>
