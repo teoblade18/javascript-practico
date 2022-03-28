@@ -65,7 +65,7 @@
         margin: auto;
         display: grid;
         grid-template-rows: 1fr 1fr 1fr;
-        row-gap: 10px;
+        row-gap: 30px;
     }
 
     .figure-card{
@@ -106,8 +106,14 @@
         margin: auto;
     }
 
+    .form-figure .form-answerds{
+        border-top: dotted 1px black;
+        padding-top: 20px;
+    }
+
     .form-figure div{
         position: relative;
+        margin-bottom: 20px;
     }
 
     .form-figure div label{
@@ -148,6 +154,18 @@
 
     .subtitle{
         font-weight: bold;
+        display: none;
+    }
+
+    @media (min-width: 720px){
+        .figure-container{
+            width: 90%;
+            margin: auto;
+            display: grid;
+            grid-template-columns:repeat(auto-fill,380px);
+            column-gap: 20px;
+            justify-content: center;
+        }
     }
 </style>
 
@@ -167,17 +185,91 @@
             
             <div class="form-figure">
                 <div >
-                    <label for="ladoCuadrado">Lado: </label>
-                    <input type="number" name="" id="ladoCuadrado">
+                    <label for="inputLadoCuadrado">Lado: </label>
+                    <input type="number" name="" id="inputLadoCuadrado">
                 </div>
 
-                <button type="button" class="primary-button">Calcular</button>
+                <button type="button" class="primary-button" id="btnCuadrado" onclick="CalcularCuadrado()">Calcular</button>
 
-                <p class="subtitle">El perímetro del cuadrado es: </p>
-                <p>Respuesta</p>
+                <div class="form-answerds">
+                    <p class="subtitle subtitle-cuadrado">El perímetro del cuadrado es: </p>
+                    <p id="lblPerimetroCuadrado"></p>
 
-                <p class="subtitle">El área del cuadrado es: </p>
-                <p>Respuesta2</p>
+                    <p class="subtitle subtitle-cuadrado">El área del cuadrado es: </p>
+                    <p id="lblAreaCuadrado"></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="figure-card">
+            <div class="title-card">
+                <img src="./Icons/triangle.png" alt="triagle figure" class="secundary-icon">
+                <h3>Triángulo</h3>
+            </div>
+
+            <p>Registre las medidas del triagulo</p>
+            
+            <div class="form-figure">
+                <div >
+                    <label for="inputLadoATriangulo">Lado A: </label>
+                    <input type="number" name="" id="inputLadoATriangulo">
+                </div>
+
+                <div >
+                    <label for="inputLadoBTriangulo">Lado B: </label>
+                    <input type="number" name="" id="inputLadoBTriangulo">
+                </div>
+
+                <div >
+                    <label for="inputBaseTriangulo">Base: </label>
+                    <input type="number" name="" id="inputBaseTriangulo">
+                </div>
+
+                <div >
+                    <label for="inputAlturaTriangulo">Altura: </label>
+                    <input type="number" name="" id="inputAlturaTriangulo">
+                </div>
+
+                <button type="button" class="primary-button" id="btnTriangulo" onclick="CalcularTriangulo()">Calcular</button>
+
+                <div class="form-answerds">
+
+                    <p class="subtitle subtitle-triangle">El perímetro del triangulo es: </p>
+                    <p id="lblPerimetroTriangulo"></p>
+
+                    <p class="subtitle subtitle-triangle" >El área del triangulo es: </p>
+                    <p id="lblAreaTriangulo"></p>
+
+                </div>
+                
+            </div>
+        </div>
+
+
+        <div class="figure-card">
+            <div class="title-card">
+                <img src="./Icons/circulo.png" alt="Circlie figure" class="secundary-icon">
+                <h3>Círculo</h3>
+            </div>
+
+            <p>Registre las medidas del círculo</p>
+            
+            <div class="form-figure">
+                <div >
+                    <label for="inputRadioCirculo">Radio: </label>
+                    <input type="number" name="" id="inputRadioCirculo">
+                </div>
+
+                <button type="button" class="primary-button" id="btnCirculo" onclick="CalcularCirculo()">Calcular</button>
+
+                <div class="form-answerds">
+                    <p class="subtitle">El perímetro del círculo es: </p>
+                    <p id="lblPerimetroCirculo"></p>
+
+                    <p class="subtitle">El área del círculo es: </p>
+                    <p id="lblAreaCirculo"></p>
+                </div>
+                
             </div>
         </div>
 
